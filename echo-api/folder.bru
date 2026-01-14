@@ -1,0 +1,27 @@
+meta {
+  name: echo-api
+}
+
+auth {
+  mode: inherit
+}
+
+vars:pre-request {
+  apiToken: secret-key
+}
+
+docs {
+  # Authentication APIs
+  
+  This folder contains APIs related to authentication and authorization.
+  
+  ## Flow
+  1. User logs in with credentials
+  2. Server returns access token
+  3. Token is used for subsequent requests
+  
+  ## Common Errors
+  - `401 Unauthorized` – Invalid or expired token
+  - `403 Forbidden` – Insufficient permissions
+  
+}

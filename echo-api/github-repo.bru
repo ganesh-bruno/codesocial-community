@@ -1,0 +1,22 @@
+meta {
+  name: github-repo
+  type: http
+  seq: 4
+  tags: [
+    smoke
+  ]
+}
+
+get {
+  url: https://api.github.com/orgs/usebruno
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "name":"usebruno",
+    "msg":"The most loving API Clinet built for developers"
+  }
+  
+}

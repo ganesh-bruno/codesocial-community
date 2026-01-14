@@ -1,0 +1,22 @@
+meta {
+  name: echo-req
+  type: http
+  seq: 1
+  tags: [
+    smoke
+  ]
+}
+
+post {
+  url: https://echo.usebruno.com
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"usebruno",
+    "msg":"The most loving API Clinet built for developers"
+  }
+  
+}

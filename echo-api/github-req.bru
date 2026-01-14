@@ -1,0 +1,22 @@
+meta {
+  name: github-req
+  type: http
+  seq: 3
+  tags: [
+    smoke
+  ]
+}
+
+get {
+  url: https://api.github.com/users/ganesh-bruno
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "name":"usebruno",
+    "msg":"The most loving API Clinet built for developers"
+  }
+  
+}

@@ -1,0 +1,41 @@
+meta {
+  name: echo-gql
+  type: graphql
+  seq: 2
+  tags: [
+    sanity
+  ]
+}
+
+post {
+  url: https://countries.trevorblades.com/graphql
+  body: graphql
+  auth: inherit
+}
+
+body:graphql {
+  query CountryQuery($code: ID!) {
+    country(code: $code) {
+      name
+      native
+      capital
+      emoji
+      currency
+      languages {
+        code
+        name
+      }
+    }
+  }
+}
+
+body:graphql:vars {
+  {
+    "code": "BR"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
